@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos Destacados</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Inicio</h1>
+        <div class="presentacion">
+            <img src="img/fotoperfil.jpg" alt="Foto de perfil">
+            <p>Mi nombre es Rafael Pinzon me considero una persona tranquila que sabe gestionar los problemas dispuesto a adaptarme a las nesecidades requeridas</p>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <h1>Sobre Mí</h1>
+        <div class="sobre-mi-grid">
+            <div class="habilidades">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Modelado de objetos,mapas y personajes</li>
+                    <li>Conocimientos de C++ </li>
+                    <li>Animacion basica de movimiento</li>
+                    <li>Creacion de bandas sonoras para video juegos</li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="formacion">
+                <h2>Formacion de creacion de videojuegos</h2>
+                <p>Conocimentos basicos de C++ para creacion de videjuegos, usando Unity como motor y modelado de objetos </p>
+                
+            </div>
+            <div class="intereses">
+                <h2>Intereses</h2>
+                <p>actulidad de la tecnologia</p>
+                <p>Creacion de videjuegos</p>
+                <p>Bandas sonoras destinadas a videojuegos</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h1>Proyectos Destacados</h1>
+        <div class="proyectos-grid">
+            <div class="proyecto">
+                <img src="img/proyecto.png" alt="Proyecto 1">
+                <h3>Proyecto Enemigos</h3>
+                <p>Creacion de mapa en Unity usando assets y itengracion de codigo para que los enemigos detecten al jugador en un campo de  vision determinado </p>
+            </div>
+            <!-- Repite para más proyectos -->
+        </div>
+    </section>
+
+    <section id="idiomas">
+        <h1>Idiomas</h1>
+        <table>
+            <tr>
+                <th>Idioma</th>
+                <th>Nivel</th>
+            </tr>
+            <tr>
+                <td>Español</td>
+                <td>Nativo</td>
+            </tr>
+            <!-- Añade más filas según sea necesario -->
+        </table>
+    </section>
+
+    <section id="experiencia">
+        <h1>Experiencia</h1>
+        <div class="experiencia-flex">
+            <div class="trabajo">
+                <h3>Estudios</h3>
+
+                <p>Por ahora no tengo experiencia laboral pero estoy dispuesto a aprender </p>
+            </div>
+            <!-- Repite para más experiencias -->
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rafael Pinzon</p>
+    </footer>
+
+    <script>
+        
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                const targetId = this.getAttribute('href'); 
+                const targetSection = document.querySelector(targetId); 
+                
+                targetSection.scrollIntoView({
+                    behavior: 'smooth', 
+                    block: 'start'      
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
